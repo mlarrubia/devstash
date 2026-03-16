@@ -1,11 +1,25 @@
-import { Search, Plus, FolderPlus } from "lucide-react";
+"use client";
+
+import { Search, Plus, FolderPlus, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useSidebar } from "@/contexts/sidebar-context";
 
 export default function TopBar() {
+  const { setMobileOpen } = useSidebar();
+
   return (
     <header className="h-14 border-b border-border flex items-center justify-between px-4 shrink-0">
       <div className="flex items-center gap-2">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden h-8 w-8"
+          onClick={() => setMobileOpen(true)}
+          aria-label="Open menu"
+        >
+          <Menu className="h-5 w-5" />
+        </Button>
         <span className="text-lg font-bold tracking-tight">DevStash</span>
       </div>
 
@@ -22,7 +36,7 @@ export default function TopBar() {
         </div>
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="hidden md:flex items-center gap-2">
         <Button variant="outline" size="sm" className="gap-1.5">
           <FolderPlus className="h-4 w-4" />
           New Collection

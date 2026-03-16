@@ -20,5 +20,4 @@
 
 - **2026-03-15** — Initial Next.js project setup. Cleared default boilerplate, added CLAUDE.md and context files, committed to main.
 - **2026-03-15** — Dashboard UI Phase 1 completed. shadcn/ui initialized, dark mode set, /dashboard route created, top bar with search and new item buttons implemented.
-
-
+- **2026-03-15** — Dashboard UI Phase 2 completed. Collapsible sidebar with item type nav links, favorite/recent collections with animated collapse, user avatar area, mobile Sheet drawer, and mobile FAB for new item/collection actions.
